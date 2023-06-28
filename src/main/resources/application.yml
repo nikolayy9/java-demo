@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: "demo-service"
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/demo
+      auto-index-creation: true
+
+logging:
+  pattern:
+    console: "%d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) %logger{36}.%M - %msg%n"
+    file: "%d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) %logger{36}.%M - %msg%n"
+  level:
+    root: "info"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+#springdoc:
+#  swagger-ui:
+#    path: /swagger-ui/index.html
